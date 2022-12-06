@@ -138,6 +138,18 @@ header > div > span {
 
 @media (max-width: 850px) {
     .container {
+        padding: 20px 30px;
         transform: rotate(90deg);
+    }
+
+    .keys-wrapper .white {
+        width: 50px;
+        height: 200px;
+    }
+
+    .keys-wrapper .black {
+        width: 34px;
+        height: 110px;
+        margin: 0 -17px;
     }
 }
