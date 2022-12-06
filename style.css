@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    accent-color: #671685;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(251,46,128,1) 0%, rgba(26,11,91,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* width: 60%; */
+    /* height: 40%; */
+    background-color: rgb(209 0 84);
+    border-radius: 20px;
+    padding: 30px 50px;
+    position: relative;
+    box-shadow: 0px 0px 20px -10px white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+}
+
+header > div > span {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.show-keys-container input {
+    width: 60px;
+    height: 28px;
+    border-radius: 20px;
+    appearance: none;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.show-keys-container input::before {
+    content: "";
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    border-radius: inherit;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(103, 22, 133, 0.35);
+    transition: all 0.5s ease;
+}
+
+.show-keys-container input:checked:before {
+    left: 35px;
+    background-color: rgba(103, 22, 133, 1);
+}
+
+/* ===== HEADER END ===== */
+/* ===== PIANO KEYS ===== */
+
+.keys-wrapper {
+    display: flex;
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.keys-wrapper .key {
+    cursor: pointer;
+    color: #a2a2a2;
+    position: relative;
+    text-transform: uppercase;
+    border: 1px solid rgb(209 0 84);
+    user-select: none;
+}
+
+.keys-wrapper .white {
+    width: 70px;
+    height: 230px;
+    border-radius: 10px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.keys-wrapper .white:active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.keys-wrapper .black {
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+
+.keys-wrapper .black:active {
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom, #000, #434343);
+}
+
+.keys-wrapper .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+}
+
+.keys-wrapper .key.hide span {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .container {
+        transform: rotate(90deg);
+    }
+}
